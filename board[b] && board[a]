@@ -1,0 +1,15 @@
+board[c]) {
+      return board[a];
+    }
+  }
+  return null;
+}
+
+export function checkDraw(board: Board): boolean {
+  if (checkWinner(board)) return false;
+  return board.every((cell) => cell !== null);
+}
+
+export function getWinningSquares(board: Board): number[] {
+  for (const [a, b, c] of WINNING_LINES) {
+    if (board[a] && board[a]
